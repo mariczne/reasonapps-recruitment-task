@@ -6,8 +6,10 @@ Create a simple system for a laboratory, that will allow to place new and retrie
 - a sample has to belong to only one patient and one order
 - there are two kinds of samples - blood tests and covid tests
 - an order cannot be updated or changed; however, it can be marked as cancelled, which should also mark its samples as such
-- API users can create orders with a single endpoint, providing only date and a list of patient ids and their ordered sample kind
-- request payload for creating order should be validated
+- API users can create orders with a single endpoint
+  - request has to contain date and a list of samples to create
+  - each sample has to contain information about which patient the sample will belong to (patientId) and sample kind
+  - request payload for creating order should be validated
 - API users can query the data in various ways:
   - get all orders for a given date, patient id, contained sample kinds or a combination of those
   - get a single order given it's id
