@@ -7,4 +7,8 @@ export default defineConfig({
   dbName: "ra-task.sqlite3",
   type: "sqlite",
   metadataProvider: TsMorphMetadataProvider,
+  seeder: {
+    path: "src/seeders",
+    defaultSeeder: "DatabaseSeeder",
+  },
 });
